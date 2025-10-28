@@ -1,0 +1,46 @@
+.darkcolorboxes {
+  background: linear-gradient(145deg, #2a3f5f, #1e2a3a);
+  border: 2px solid #3498db;
+  color: #ecf0f1;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+  backdrop-filter: blur(5px);
+  outline: none;
+}
+
+.darkcolorboxes:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.3), 0 8px 20px rgba(52, 152, 219, 0.3);
+  transform: translateY(-2px);
+}
+
+.darkcolorboxes::placeholder {
+  color: #bdc3c7;
+  opacity: 0.7;
+}
+
+.darkcolorboxes:hover {
+  background: linear-gradient(145deg, #34495e, #2c3e50);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
+
+.darkcolorboxes:focus {
+  animation: pulse 1.5s infinite;
+}
